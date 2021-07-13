@@ -1,0 +1,7 @@
+@mixin box-shadow($x, $y, $blur, $c) {
+    -ms-box-shadow: $x $y $blur $c;
+    box-shadow: $x $y $blur $c;
+}
+@mixin gridbox() {
+    display: grid;
+}
