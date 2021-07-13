@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click here to visit](https://github.com/rabahmilano/clipboard-landing-page)
-- Live Site URL: [Click here to visit](https://rabahmilano.github.io/clipboard-landing-page/)
+- Solution URL: [Click here to visit](https://github.com/rabahmilano/fylo-landing-page-with-two-column)
+- Live Site URL: [Click here to visit](https://rabahmilano.github.io/fylo-landing-page-with-two-column/)
 
 ## My process
 
