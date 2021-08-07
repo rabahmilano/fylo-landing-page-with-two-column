@@ -6,45 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="dist/css/styles.css">
 
   <title>Frontend Mentor | Fylo landing page with two column layout</title>
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <img src="images/logo.svg" alt="logo" class="logo">
-        <ul>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Sign In</a></li>
-        </ul>
-      </nav>
 
-      <div class="content">
-        <div class="hero">
-          <img class="illustration" src="images/illustration-1.svg" alt="illustration">
-  
-          <div class="title">
-            <h2>All your files in one secure location, accessible anywhere.</h2>
-            <p>Fylo stores your most important files in one secure location.
-              Access them wherever you need, share and collaborate with friends,
-              family, and co-workers.</p>
-            <form action="/suscribe" method="post">
-              <input type="email" name="email" placeholder="Enter your email..." required>
-              <input type="submit" value="Get Started">
-            </form>
-          </div>
-        </div>
+  <header class="header">
+    <nav class="header__navbar flex flex-jc-sb flex-ai-c">
+      <a href="#">
+        <img src="images/logo.svg" alt="fylo" class="header__logo">
+      </a>
+
+      <div class="header__links flex flex-jc-sb flex-ai-c">
+        <a href="#features" class="header__link">Features</a>
+        <a href="#team" class="header__link">Team</a>
+        <a href="#cta" class="header__link">Sign In</a>
       </div>
-    </div>
+    </nav>
   </header>
 
   <main>
+    <article class="hero">
+      <div class="container hero__container">
+        <img class="illustration hero__illustration" src="images/illustration-1.svg" alt="illustration">
+
+        <div class="hero__title">
+          <h1>All your files in one secure location, accessible anywhere.</h1>
+          <p class="hero__text">Fylo stores your most important files in one secure location.
+            Access them wherever you need, share and collaborate with friends,
+            family, and co-workers.</p>
+
+          <form action="/suscribe" class="hero__form" method="post">
+            <input type="email" name="email" class="input" placeholder="Enter your email..." required>
+            <input type="submit" class="input btn" value="Get Started">
+          </form>
+        </div>
+      </div>
+    </article>
     <picture>
       <source media="(min-width: 768px)" srcset="images/bg-curve-desktop.svg">
       <img class="bg-curve" src="images/bg-curve-mobile.svg" alt="bg">
@@ -66,7 +69,7 @@
             </div>
           </div>
 
-          <div class="review">
+          <div class="review" id="team">
             <img src="images/icon-quotes.svg" alt="icon" class="icon">
             <p class="review-content">Fylo has improved our team productivity by an order of magnitude. Since
               making the switch our team has become a well-oiled collaboration machine.</p>
@@ -92,8 +95,8 @@
 
         <div class="form">
           <form action="/subscribe">
-            <input type="email" name="email" placeholder="email@example.com" required>
-            <input type="submit" value="Get Started For Free">
+            <input type="email" name="email" class="input" placeholder="email@example.com" required>
+            <input type="submit" class="input btn" value="Get Started For Free">
           </form>
         </div>
       </div>
@@ -103,7 +106,9 @@
   <footer>
     <div class="container">
       <div class="logo">
-        <img src="images/logo.svg" alt="logo">
+        <a href="#">
+          <img src="images/logo-white.svg" alt="fylo">
+        </a>
       </div>
 
       <div class="links">
@@ -144,13 +149,6 @@
       Coded by <a href="https://codepen.io/rabahmilano/" target="_blank">Rabah ABED</a>.
     </p>
   </footer>
-
-  <!-- <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer> -->
 </body>
 
 </html>
