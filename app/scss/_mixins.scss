@@ -1,0 +1,19 @@
+@mixin box-shadow($x, $y, $blur, $c) {
+  box-shadow: $x $y $blur $c;
+}
+
+@mixin gridbox() {
+  display: grid;
+}
+
+@mixin transition($prop) {
+  transition: $prop 0.3s ease-in-out;
+}
+
+$breakpoints-up: ("medium": "768px", "large": "968px", "xlarge": "1400px");
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}

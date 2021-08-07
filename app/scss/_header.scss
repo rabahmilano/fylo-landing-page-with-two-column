@@ -1,0 +1,43 @@
+.header {
+  padding: 1.25rem 0;
+
+  &__navbar {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 80px;
+  }
+
+  &__links {
+    width: 55%;
+    max-width: 350px;
+
+    a {
+      color: $veryDarkBlue;
+      font-size: $font-sm;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+      @include transition(border-bottom-color);
+
+      &:hover {
+        border-bottom-color: $desaturatedBlue;
+      }
+    }
+  }
+
+  @include breakpoint-up(large) {
+    padding: 3.125rem 0;
+
+    &__logo {
+      max-width: 150px;
+    }
+
+    & a {
+      font-size: $font-med;
+    }
+  }
+}

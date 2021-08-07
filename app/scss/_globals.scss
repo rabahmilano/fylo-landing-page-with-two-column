@@ -1,0 +1,120 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+html {
+  font-size: 100%;
+}
+
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-jc-fs {
+    justify-content: flex-start;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+
+  &-ai-fs {
+    align-items: flex-start;
+  }
+
+  &-fd-c {
+    flex-direction: column;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.error {
+  font-size: $font-xsm;
+  margin-top: -8px;
+  text-align: left;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: solid 1px $desaturatedBlue;
+  outline: none;
+  border-radius: 5px;
+
+  &:focus:invalid {
+    border: solid 2px crimson;
+  }
+}
+
+.btn {
+  background-color: $brightBlue;
+  color: $lightGrayishBlue;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  @include transition(opacity);
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+img.illustration {
+  padding: 3rem 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: .9rem;
+}
+
+img.icon {
+  width: auto;
+}
+
+@media (min-width: 769px) {
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
+}

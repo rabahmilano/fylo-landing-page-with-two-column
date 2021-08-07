@@ -1,0 +1,63 @@
+.hero {
+  color: $veryDarkBlue;
+  text-align: center;
+  padding: .9rem 0 3rem;
+
+	& &__container {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+  &__text {
+    margin: 1.25rem 0;
+    line-height: 1.5;
+  }
+
+  &__form {
+    width: 85%;
+		max-width: 350px;
+    margin: 0 auto;
+
+		&:focus:invalid p.error {
+			color: red;
+		}
+  }
+
+  @include breakpoint-up(large) {
+		padding-bottom: 5rem;
+
+		& &__container {
+			max-width: 1300px;
+		}
+
+    &__illustration {
+      grid-column: 2 / 2;
+    }
+
+    &__title {
+      grid-row: 1 / 1;
+      align-self: center;
+      text-align: left;
+			margin: 0;
+			max-width: 90%;
+
+			h1 {
+				font-size: $font-xl;
+			}
+    }
+
+		&__form {
+			width: 100%;
+			max-width: 100%;
+			margin: 0;
+			display: grid;
+			grid-template-columns: 3fr 2fr;
+			column-gap: 1rem;
+		}
+  }
+}

@@ -1,0 +1,265 @@
+
+@import 'mixins', 'colors', 'fonts', 'globals', 'header', 'hero';
+
+main {
+  .bg-curve {
+    margin-bottom: -2px;
+  }
+
+  article {
+    .container {
+      width: 90%;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    @include breakpoint-up(large) {
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+      }
+
+      .illustration {
+        grid-column: 2 /2;
+      }
+
+      .description {
+        grid-row: 1 / 1;
+
+        .title {
+          h2 {
+            text-align: left;
+          }
+        }
+
+        .review {
+          max-width: 370px;
+        }
+      }
+    }
+  }
+
+  #features {
+    background-color: $lightGrayishBlue;
+    color: $veryDarkBlue;
+    padding-bottom: 5rem;
+
+    .illustration {
+      width: 90;
+    }
+
+    .title {
+      p {
+        margin: 1.3rem 0;
+      }
+
+      div.link {
+        text-align: center;
+        margin: .5rem auto 2rem;
+
+        a {
+          display: inline-block;
+          padding: 3px 0;
+          color: $moderateCyan;
+          border-bottom: 2px solid $moderateCyan;
+          @include transition(opcaity);
+
+          &:hover {
+            opacity: .8;
+          }
+
+          .icon {
+            padding-left: 5px;
+            display: inline;
+          }
+        }
+      }
+
+      @media (min-width: 769px) {
+        div.link {
+          text-align: left;
+        }
+      }
+    }
+
+    .review {
+      background-color: #fff;
+      @include box-shadow(0, 8px, 20px, $lightGray);
+      border-radius: 8px;
+      padding: 1.5rem;
+
+      .review-content {
+        padding: 1rem 0;
+        line-height: 1.4rem;
+      }
+
+      @media (min-width: 769px) {
+        .review-content {
+          line-height: 1.7rem;
+        }
+      }
+
+      .info {
+        display: flex;
+        align-items: center;
+
+        .avatar {
+          width: 40px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+
+        .user {
+          p {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+
+  #cta {
+    background-color: $desaturatedBlue;
+    padding: 3rem 1rem;
+
+    .title {
+      color: $lightGrayishBlue;
+      text-align: center;
+
+      p {
+        line-height: 1.4rem;
+        padding: 1.5rem 0;
+        font-weight: normal;
+      }
+
+      @include breakpoint-up(large) {
+        p {
+          line-height: 1.8rem;
+        }
+      }
+    }
+
+    .form {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    @include breakpoint-up(large) {
+      .title {
+        text-align: left;
+        max-width: 450px;
+      }
+
+      input {
+        max-width: 400px;
+      }
+
+      input[type=submit] {
+        width: auto;
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 4rem 0;
+  background-color: $veryDarkBlue;
+
+  .container {
+    width: 85%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    .logo {
+      max-width: 200px;
+    }
+
+    .links {
+      .link {
+        margin: 1.5rem 0;
+
+        a {
+          color: $lightGray;
+          padding: 5px 5px 0 5px;
+          display: block;
+          text-transform: capitalize;
+          letter-spacing: 1px;
+          @include transition(color);
+          width: fit-content;
+
+          &:hover {
+            color: $brightBlue;
+          }
+
+          .icon {
+            width: 18px;
+            margin-right: 15px;
+            display: inline;
+          }
+        }
+      }
+
+      .social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+
+        a {
+          margin: 0 20px;
+          font-size: 1.5rem;
+          @include transition(color);
+        }
+
+        a:nth-child(1):hover {
+          color: #4267b2;
+        }
+
+        a:nth-child(2):hover {
+          color: #fb3958;
+        }
+
+        a:nth-child(3):hover {
+          color: #00aced;
+        }
+      }
+    }
+
+    @include breakpoint-up(large) {
+      .links {
+        display: flex;
+        justify-content: space-between;
+
+        .social-links {
+          align-items: flex-start;
+
+          a {
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    color: $desaturatedBlue;
+    font-size: 11px;
+
+    a {
+      color: $moderateCyan;
+      text-decoration: underline;
+      @include transition(color);
+    }
+
+    & a:hover {
+      color: $lightGrayishBlue;
+    }
+  }
+}
